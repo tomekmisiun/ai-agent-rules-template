@@ -1,0 +1,22 @@
+---
+description: Backend application code and test rules
+globs:
+  - "src/**/*"
+  - "app/**/*"
+  - "lib/**/*"
+  - "internal/**/*"
+  - "tests/**/*"
+  - "test/**/*"
+alwaysApply: false
+---
+
+Source of truth (read from `.ai-rules/`):
+
+- `architecture.md`
+- `api.md`
+- `database.md`
+- `security.md`
+- `testing.md`
+- `workers.md` (when the target repo uses background jobs)
+
+Replace glob paths in this file when adopting into a repository with a different layout.
