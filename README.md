@@ -2,10 +2,28 @@
 
 Reusable AI coding-agent rules for **Cursor**, **Claude Code**, and **Codex CLI**.
 
+**Version:** 1.0.1 · [Changelog](CHANGELOG.md) · [Report a bug](https://github.com/tomekmisiun/ai-agent-rules-template/issues/new?template=bug_report.yml)
+
 This repository is not a library you import at runtime. It is a **policy and workflow
 system** that tells coding agents how to work: what to read before editing, how to
 scope tasks, when to write tests, how to hand off for review, and when they may touch
 git remotes.
+
+## Origin and release policy
+
+These rules are a **backport** of AI workflow policy maintained in the actively
+developed [appointment-voice-saas](https://github.com/tomekmisiun/appointment-voice-saas)
+project. That application repo is the day-to-day source of truth; this template is a
+**genericized, tool-portable snapshot** for reuse in other repositories.
+
+| | |
+|-|-|
+| **This template** | v**1.0.1** — generic release line; see [CHANGELOG](CHANGELOG.md) |
+| **Updates** | Planned as the upstream project evolves (bugfixes, new rules, adapter tweaks) |
+| **Evidence** | Frozen export under `reference/` (commit `e4495b7`) for provenance |
+
+When reporting problems, say whether you also see them in the upstream project — it
+helps decide if a fix belongs here, there, or in both. See [Contributing](CONTRIBUTING.md#reporting-bugs).
 
 ## Problem this solves
 
@@ -260,9 +278,15 @@ Does **not** invoke Claude, Codex, or Cursor.
 
 ## Provenance
 
-Derived from a verified export documented in [reference/README.md](reference/README.md).
-Files under `reference/source-export/` are historical evidence, not active rules.
+Rules were extracted and genericized from [appointment-voice-saas](https://github.com/tomekmisiun/appointment-voice-saas) (export commit `e4495b7`). Full audit trail: [reference/README.md](reference/README.md). Files under `reference/source-export/` are read-only evidence, not active configuration.
+
+Upstream may advance before this template; watch [releases](https://github.com/tomekmisiun/ai-agent-rules-template/releases) and [CHANGELOG.md](CHANGELOG.md) for updates.
+
+## Support
+
+- **Bugs** — [open an issue](https://github.com/tomekmisiun/ai-agent-rules-template/issues/new?template=bug_report.yml) (use the bug report template)
+- **Contributing** — [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-See repository license (add when publishing).
+MIT — see [LICENSE](LICENSE).

@@ -1,0 +1,93 @@
+name: Bug report
+description: Report incorrect, missing, or conflicting AI rules or template tooling
+title: "[bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. This template is **v1.0** and backported from an
+        actively developed project — fixes may land here after updates from upstream.
+
+        Before filing, run `make validate` and note the result below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What went wrong?
+      description: Describe the incorrect rule, broken link, validation failure, or confusing workflow.
+      placeholder: e.g. `project.mdc` references a missing file; cross-reviewer script exits with...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Universal rules (`.ai-rules/`)
+        - Cursor (`.cursor/rules/`)
+        - Claude Code (`CLAUDE.md`, `.claude/`)
+        - Codex CLI (`AGENTS.md`)
+        - Commands (`.commands/`)
+        - Agents / personas (`agents/`)
+        - Scripts (`scripts/`)
+        - Documentation (`docs/`, `README.md`)
+        - Validation (`make validate`, CI workflow)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Template version or commit
+      description: Tag, release, or `git rev-parse --short HEAD`
+      placeholder: e.g. v1.0.1 or git short SHA
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Commands, tool (Cursor / Claude / Codex), and minimal context.
+      placeholder: |
+        1. Clone repo at ...
+        2. Run `make validate` or open file X in Cursor
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: validate
+    attributes:
+      label: Validation output (if applicable)
+      description: Paste output of `make validate` or `bash scripts/validate-ai-workflows.sh`
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: upstream
+    attributes:
+      label: Upstream context
+      description: Optional — helps track backports from the live project
+      options:
+        - label: I also saw this (or similar) in the source application repository
+          required: false

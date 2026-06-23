@@ -235,6 +235,10 @@ coupling_exclude_files=(
   docs/SOURCE_MANIFEST.md
   docs/ADAPTATION_CHECKLIST.md
   docs/VALIDATION_REPORT.md
+  README.md
+  CONTRIBUTING.md
+  CHANGELOG.md
+  reference/README.md
 )
 
 for pattern in "${coupling_patterns[@]}"; do
