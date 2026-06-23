@@ -1,0 +1,8 @@
+blank_issues: false
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/tomekmisiun/ai-agent-rules-template/blob/main/CONTRIBUTING.md
+    about: How to propose rule changes and run validation before a PR
+  - name: Source project (live rules)
+    url: https://github.com/tomekmisiun/appointment-voice-saas
+    about: Actively developed application where these rules originate (not a drop-in copy of this template)
