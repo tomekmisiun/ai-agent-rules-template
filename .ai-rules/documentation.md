@@ -425,9 +425,9 @@ Example:
 
 | Document | Purpose |
 |---|---|
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Components, boundaries, and request flows |
-| [`docs/TESTING.md`](docs/TESTING.md) | Test strategy and commands |
-| [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) | Deployment and rollback procedures |
+| `docs/ARCHITECTURE.md` | Components, boundaries, and request flows |
+| `docs/TESTING.md` | Test strategy and commands |
+| `docs/DEPLOYMENT.md` | Deployment and rollback procedures |
 
 Do not link to files that do not exist.
 
